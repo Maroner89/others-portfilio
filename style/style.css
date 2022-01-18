@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Poppins:ital,wght@0,400;0,600;0,700;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Korean', 'Poppins', sans-serif;
+    
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1500px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 75px;
+    line-height: 75px;
+    background: #fff;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+header .blank .intro {
+    cursor: pointer;
+}
+
+header .blank .intro p {
+    display: inline-block;
+    color: #111;
+    min-width: 110px;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+header .intro p span {
+    color: #111;
+    font-size: 0.5em;
+    font-weight: 200;
+    margin-left: 10px;
+    letter-spacing: 5px;
+}
+
+header ul {
+    position: relative;
+    display: flex;  
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #111;
+    font-weight: 400;
+    margin-left: 50px;
+    text-decoration: none;
+    transition: 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header ul li a:hover {
+    font-weight: 600;
+    color: rgb(0, 197, 82);
+    padding: 5px;
+}
+
+section {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    padding: 50px;
+    /* padding: 100px; */
+    /* display: flex;
+    justify-content: space-between; */
+    align-items: center;
+    transition: 0.5s;
+    /* margin: 0 auto; */
+}
+
+/* 보여줄 구간의 높이와 넓이 설정 */
+#slideShow {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 1500px;
+    height: 100%;
+    overflow: hidden;
+    
+}
+/* 리스트 형식으로 이미지를 일렬로 정렬할 것이기 때문에,
+500px 밖으로 튀어 나간 이미지들은 hidden으로 숨김. */
+
+.slides {
+    position: absolute;
+    width: 1000px;
+    height: 100%;
+    left: 0;
+    top: 0; /* 슬라이드 할 사진과 마진 총 넓이 */
+    transition: left 0.5s ease-out;
+    /* ease-out: 처음에는 느렸다가 점점 빨라짐 */
+}
+
+.slides ul {
+    width: 1000px;
+}
+
+/* 첫번째 슬라이드 가운데에 정렬하기 위해
+첫번째 슬라이드만 margin-left 조정 */
+
+
+/* 슬라이드들 옆으로 정렬 */
+.slides li:not(:last-child) {
+    float: left;
+    /* margin-right: 100px; */
+}
+
+.slides li {
+    float: left;
+    width: 100vw;
+    height: 100%;
+}
+
+.slides li img {
+    width: 95%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.controller span {
+    position: fixed;
+    background: transparent;
+    color: #111;
+    text-align: center;
+    border-radius: 25%;
+    padding: 10px 10px;
+    top: 45%;
+    font-size: 2em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* "이전"과 "다음" 화살표에 마우스 커서가 올라가 있을때 */
+
+.controller span:hover {
+    box-shadow: rgba(0,0,0,0.1);
+    color: rgb(0, 197, 82)
+}
+
+.prev {
+    left: 10%;
+}
+
+/* 이전 화살표에 마우스 커서가 올라가 있을때
+이전 화살표가 살짝 왼쪽으로 이동하는 효과 */
+
+.prev:hover {
+    transform: translateX(-10px);
+}
+
+.next {
+    right: 10%;
+}
+
+/* 다음 화살표에 마우스 커서가 올라가 있을때
+이전 화살표가 살짝 오른쪽으로 이동하는 효과 */
+
+.next:hover {
+    transform: translateX(10px);
+}
+
+.whole {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    padding: 50px;
+    /* padding: 100px; */
+    /* display: flex;
+    justify-content: space-between; */
+    align-items: center;
+    transition: 0.5s;
+}
+
+.email {
+    position: fixed;
+    display: inline-block;
+    left:50%;
+    bottom: 10%;
+    transform: translate(-50%, 0);
+
+    background: #fff;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.email:hover {
+    letter-spacing: 0.1em;
+}
+
+.email p {
+    padding: 10px 20px;
+}
+
+.email p a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
+.email p a:hover {
+    color: rgb(0, 197, 82);
+}

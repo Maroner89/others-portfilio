@@ -1,71 +1,116 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>조은지 포트폴리오 사이트에 오신걸 환영 합니다.</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <section>
-        <header>
-            <div class="blank">
-                <a href="index.html" class="intro"><p>jo eunji <span>Portfolio</span></p></a>
-            </div>
+    <header>
+        <div class="blank">
+            <a href="#" class="intro"><p>jo eunji <span>Portfolio</span></p></a>
+        </div>
         
-            <ul>
-                <li><a href="index.html" title="홈으로">home</a></li>
-                <li><a href="index.html" title="3D 모델링">modeling</a></li>
-                <li><a href="index.html" title="3D 프린팅">3d printing</a></li>
-                <li><a href="mailto:dmsnwl94@naver.com" title="메일 보내기">contact</a></li>
+        <ul>
+            <li><a href="index.html" title="홈으로">home</a></li>
+            <li><a href="model.html" title="전체보기">portfolio</a></li>
+            <!-- <li><a href="print.html" title="3D 프린팅">3d printing</a></li> -->
+            <li><a href="mailto:dmsnwl94@naver.com" title="메일 보내기">contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <div class="email" onclick="copyEmailAdd();">
+            <p><a href="#">이메일 주소 복사하기</a>
+            </p>
+        </div>
+        <div id="slideShow">
+            <ul class="slides">
+                <li>
+                    <img src="./img/portfolio/Cookie-run cream unicorn1_PT.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Cookie-run cream unicorn2_PT.png.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Moonlight magician.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Time controller.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Cookie-run clock tower._PT.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Cookie-run house._PT.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Giyu Tomioka_PT.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/cherry_PT.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Jingugi_main.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Jini_main.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Joy_PT.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Ssariz Backy_PT.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Ssariz Chop&Chobby_PT.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Ssariz hooky_PT.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Ssariz Paul_PT.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/Ssariz Popo_PT.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/printer/clay_1.JPG" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/printer/clay_2.JPG" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/printer/clay_3.JPG" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/printer/clay_4.JPG" alt="">
+                </li>
+                <li>
+                    <img src="./img/portfolio/printer/clay_5.JPG" alt="">
+                </li>
             </ul>
-        </header>
-        <div class="mainBg">
-            <img class="mainImg" src="./img/portfolio/Cookie-run cream unicorn1_PT.png"  alt="Portfolio">
+            <p class="controller">
+                <!-- &lang: 왼쪽 방향 화살표
+                &rang: 오른쪽 방향 화살표-->
+                <span class="prev">&lang;</span>
+                <span class="next">&rang;</span>
+            </p>
         </div>
-        <!-- <div class="content">
-            <div class="textBox">
-                <h2>안녕하세요. <span>3D 디자이너 조은지</span> 입니다.</h2>
-                <p>
-                    <a>이메일: dmsnwl94@naver.com</a>
-                </p>
-            </div>
-            <div class="imgBox">
-                <img src="./img/portfolio/Cookie-run clock tower._PT.png" class="portfolio" alt="">
-            </div> -->
-        </div>
-        <ul class="thumb">
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Cookie-run cream unicorn1_PT.png" onclick="imgSlider('./img/portfolio/Cookie-run cream unicorn1_PT.png'); " alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Cookie-run cream unicorn2_PT.png.png" onclick="imgSlider('./img/portfolio/Cookie-run cream unicorn2_PT.png.png');" alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Moonlight magician.png" onclick="imgSlider('./img/portfolio/Moonlight magician.png');" alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Time controller.png" onclick="imgSlider('./img/portfolio/Time controller.png');" alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Cookie-run clock tower._PT.png" onclick="imgSlider('./img/portfolio/Cookie-run clock tower._PT.png');" alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Cookie-run house._PT.png" onclick="imgSlider('./img/portfolio/Cookie-run house._PT.png');" alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Giyu Tomioka_PT.png" onclick="imgSlider('./img/portfolio/Giyu Tomioka_PT.png');"  alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/cherry_PT.png" onclick="imgSlider('./img/portfolio/cherry_PT.png');"  alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Jingugi_main.png" onclick="imgSlider('./img/portfolio/Jingugi_main.png');" alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Jini_main.png" onclick="imgSlider('./img/portfolio/Jini_main.png');" alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Joy_PT.png" onclick="imgSlider('./img/portfolio/Joy_PT.png'); " alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Ssariz Backy_PT.png" onclick="imgSlider('./img/portfolio/Ssariz Backy_PT.png');" alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Ssariz Chop&Chobby_PT.png" onclick="imgSlider('./img/portfolio/Ssariz Chop&Chobby_PT.png');"  alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Ssariz hooky_PT.png" onclick="imgSlider('./img/portfolio/Ssariz hooky_PT.png');" alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Ssariz Paul_PT.png" onclick="imgSlider('./img/portfolio/Ssariz Paul_PT.png');" alt=""></li>
-            <li title="크게보기"><img class="smallBg" src="./img/portfolio/Ssariz Popo_PT.png" onclick="imgSlider('./img/portfolio/Ssariz Popo_PT.png');" alt=""></li>
-        </ul>
-
-        <ul class="sci">
-            <li><a href="#" title="페이스북"><img src="./img/social/facebook.png" alt=""></a></li>
-            <li><a href="#" title="트위터"><img src="./img/social/twitter.png" alt=""></a></li>
-            <li><a href="#" title="인스타그램"><img src="./img/social/instagram.png" alt=""></a></li>
-        </ul>
-
+    
     </section>
-    <script type="text/javascript">
-        function imgSlider(anything){
-            document.querySelector('.mainImg').src = anything;
-        }
+    <script src="slideShow.js"></script>
+    <script>
+        function copyEmailAdd() {
+            var copyText = document.createElement("textarea");
+            document.body.appendChild(copyText);
+            copyText.value = 'dmsnwl94@naver.com';
+            copyText.select();
+            document.execCommand('copy');
+            document.body.removeChild(copyText);
+            alert(copyText.value + '\ne-mail 주소가 클립보드에 복사 되었습니다.');
+        };
     </script>
 </body>
 </html>
